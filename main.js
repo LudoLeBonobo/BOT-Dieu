@@ -1,15 +1,15 @@
-const { Client } = require('discord.js');
+const { Client } = require("discord.js");
+const { TOKEN, PREFIX } = require("./config");
 const client = new Client({ disableEveryone: true });
 
-client.on('ready', () => {
-  console.log(`Logged in as ${client.user.tag}!`);
+client.on("ready", () => {
+  console.log("Ready pour niquer des mères !");
 });
 
-client.on('message', msg => {
-  if (msg.content === 'ping') msg.channel.send('pong');
-  if (msg.content === 'everyone') msg.channel.send('@everyone, Salut à tous ^^', {disableEveryone: false});
-  if (msg.content === 'noteveryone') msg.channel.send('@everyone (noteveryone), Salut à tous ^^');
+client.on("message", msg => {
+  if (msg.content.startsWith(`${PREFIX}ping`)) msg.channel.send("pong");
+  if (msg.content.startsWith(`${PREFIX}pong`)) msg.channel.send("ping");
 });
 
-client.login('NjkyMDU0NzQxNjkzNDk3NDI0.XoHgwQ.xrVb0zDdliKXIWL4LbEnVuXuuyU');
+client.login(TOKEN);
 
