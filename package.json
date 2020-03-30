@@ -1,0 +1,12 @@
+{
+  "name": "dieu",
+  "version": "0.1.0",
+  "description": "C'est Dieu, tout simplement.",
+  "main": "main.js",
+  "repository": "https://github.com/LudoLeBonobo/BOT-Dieu.git",
+  "author": "Ludovic Régnier <ludovic.regnier.2004@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "discord.js": "discordjs/discord.js"
+  }
+}
